@@ -1,7 +1,5 @@
 #include<stdio.h>
 #define size 5
-
-			
 int queue[size];
 int f=-1,r=-1,q;
 
@@ -46,7 +44,6 @@ void main()
 	printf("\n 2. delete");
 	printf("\n 3.display");
 	printf("\n 4.exit");
-	
 	do{
 	printf("\n Enter your choice : ");
 	scanf("%d",&ch);
