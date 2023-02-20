@@ -21,19 +21,14 @@ void Insertqueue(int elem)
 {
 	node *p;
 	p=newnode(elem);
-	if(p==NULL)
-		printf("Queue is full");
+	p->info=elem;
+	p->link=NULL;
+	if(front==NULL)
+		front=rear=p;
 	else
 	{
-		p->info=elem;
-		p->link=NULL;
-		if(front==NULL)
-			front=rear=p;
-		else
-		{
-			rear->link=p;
-			rear=p;
-		}
+		rear->link=p;
+		rear=p;
 	}
 }
 void Deletequeue()
@@ -57,7 +52,7 @@ void Display()
 	{
 		printf("%d ",curr->info);
 		curr=curr->link;
-		if(curr!=NULL)
+		while(curr!=NULL)
 			break;
 	}
 }	
