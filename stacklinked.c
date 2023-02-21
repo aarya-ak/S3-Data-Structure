@@ -24,7 +24,7 @@ void Display()
 	{
 		printf("%d ",curr->info);
 		curr=curr->link;
-		if(curr!=NULL)
+		while(curr!=NULL)
 			break;
 	}
 }
